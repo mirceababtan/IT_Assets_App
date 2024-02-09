@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Devices</title>
+    <!-- <link rel="icon" href="data:;base64,iVBORw0KGgo="> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/table-style.css">
+    <link rel="stylesheet" href="styles/add-device-style.css">
+    <link rel="stylesheet" href="styles/modals.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/modals.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.min.js" integrity="sha512-UnrKxsCMN9hFk7M56t4I4ckB4N/2HHi0w/7+B/1JsXIX3DmyBcsGpT3/BsuZMZf+6mAr0vP81syWtfynHJ69JA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="homepage.js"></script>
+</head>
+<body id="main_body">
+    <div class="main-header" id="main_header">
+        <h1 style="
+            margin-left: 40px;
+            background-color: black;
+            padding: 3px;
+            border-radius: 6px;
+            font-weight: 700;
+            color:whitesmoke;
+            padding-left: 8px;
+            padding-right: 8px;
+        ">User Assset Inventory</h1>
+        <h1 id="username" style="
+            margin-right: 40px;
+            background-color: rgb(111, 62, 157);
+            color: whitesmoke;
+            border-radius: 4px;
+            padding: 4px;
+            padding-left: 6px;
+            padding-right: 6px;
+            border: solid 1px darkgray;
+        "></h1>
+    </div>
+    <div class="main-sidebar" id="main_sidebar">
+        <div class="upper-part">
+            <button class="home-button click-effect nav-button" id="home_button">
+                <img src="images/home_icon.svg" alt="">
+                Home
+            </button>
+            <button class="add-device click-effect nav-button" id="add_device_button">
+                <img src="images/add_employee_icon.svg" alt="">
+                Add Device
+            </button>
+            <button class="employees click-effect nav-button" id="employees_button">
+                <img src="images/employee-icon.svg" alt="">
+                Employees
+            </button>
+            <button class="add-employee click-effect nav-button" id="add_employee_button">
+                <img src="images/add_device_icon.svg" alt="">
+                Add Employee
+            </button>
+            <button class="export-to-excel click-effect nav-button" id="export_to_excel_button">
+                <img src="images/export_to_excel_icon.svg" alt="">
+                Export to Excel
+            </button>
+            <button class="generate-form click-effect nav-button" id="generate_form_button">
+                <img src="images/form_icon.svg.svg" alt="">
+                Generate Form
+            </button>
+        </div>
+        <div class="lower-part">
+            <button class="about-button click-effect nav-button" id="about_button">
+                <img src="images/about-icon.svg" alt="">
+                About
+            </button>
+            <button class="logout-button click-effect nav-button" id="logout_button">
+                <img src="images/logout-icon.svg" alt="">
+                Log Out
+            </button>
+        </div>
+    </div>
+
+    <div id="info_modal" class="info-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="modal_close_btn">&times;</span>
+            <p id="modal_text"></p>
+        </div>
+    </div>
+
+    <div id="confirmation_modal" class="modal">
+        <div class="modal-content confirmation-modal-content">
+            <span class="close-btn" id="confirmation_modal_close_btn">&times;</span>
+            <p id="modal_text">Are you sure you want to delete?</p>
+            <button id="no_button" class="confirmation-modal-buttons">NO</button>
+            <button id="yes_button" class="confirmation-modal-buttons">YES</button>
+        </div>
+    </div>
+
+    <div id="edit_modal" class="modal">
+        <div class = "modal-content edit-modal-content">
+            <span class="close-btn edit-modal-close-btn" id="modify_modal_close_btn">&times;</span>
+            <div class="inner-edit-content" id="edit_modal_content">
+            </div>
+        </div>
+    </div>
+
+    <div id="edit_modal_employee" class="modal">
+        <div class = "modal-content edit-modal-content">
+            <span class="close-btn edit-modal-close-btn" id="modify_modal_close_btn">&times;</span>
+            <div class="inner-edit-content-employee" id="edit_modal_content_employee">
+            </div>
+        </div>
+    </div>
+
+    <div id="export_modal" class="modal">
+        <div class="modal-content edit-modal-content" id="export_modal_content">
+            <span class="close-btn edit-modal-close-btn" id="export_modal_close_btn">&times;</span>
+            <div class="inner-export-modal" id="inner_export_modal">
+                <button class="modify-button export-modal-button" id="export_all_devices_button">
+                    Export All
+                </button>
+                <button class="modify-button export-modal-button" id="export_filtered_devices_button">
+                    Export Filtered
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="generate_form_modal" class="modal">
+        <div class="modal-content edit-modal-content" id="generate_form_modal_content">
+            <span class="close-btn edit-modal-close-btn" id="generate_form_modal_close_btn">&times;</span>
+            <div class="inner-edit-content" id="inner_generate_form_modal"></div>
+        </div>
+    </div>
+
+    <div class="table-container" id="table_container"> 
+    </div>
+    <div id="overlay" class="overlay"></div>
+
+    <!-- <label for="description">Description:<input type="text" name="description" id="description" class="inputs description" required></label> -->
+</body>
+</html>

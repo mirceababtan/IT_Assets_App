@@ -1,0 +1,54 @@
+.form-container{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-form{
+    border: 2px solid darkgray;
+    padding: 14px;
+    padding-top: 0px;
+    border-radius: 6px;
+    background-color: whitesmoke;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    width: 350px;
+}
+
+.add-device-label{
+    display: block;
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+}
+
+
+
+.inputs{
+    font-size: 1.4rem;
+    line-height: 1.2;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid darkgray;
+    display: block;
+    margin-top: 8px;
+    background-color: whitesmoke;
+}
+
+
+
+.description{
+    resize:none;
+}
+
+.inputs:focus{
+    outline: none;
+    border: 3px solid #525050;
+}
+
+.submit-button{
+    width: 50%;
+    margin-top: 1rem;
+    height: 30px;
+    font-size: 18px;
+}

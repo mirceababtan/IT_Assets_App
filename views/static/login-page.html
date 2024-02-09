@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralizare-Echipamente-IT</title>
+    <link rel="stylesheet" href="styles/login-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <form class="form" id="form" action="/login" method="post">
+          <h1 class="form-title">Login</h1>
+          <input id="username" name="username" type="text" class="form-input" autofocus placeholder="Username">
+          <input id="password" name="password" type="password" class="form-input" autofocus placeholder="Password">
+          <div class="button-container">
+            <button class="form-button" id="submit-button" type="submit" value="login">Log In</button>
+          </div>
+        </form>
+    </div>
+    <script>
+      $('#submit-button').on('click',function(){
+        const username = $('#username').val();
+        localStorage.setItem('username', username);
+      });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    /* color:rgb(109, 93, 70); */
+    color: black;
+    background: whitesmoke;
+    /* background: rgb(128,255,255); */
+    /* background: linear-gradient(90deg, rgba(128,255,255,0.938813025210084) 4%, rgba(36,181,195,0.8911939775910365) 62%, rgba(0,255,222,0.8799894957983193) 100%); */
+}
+
+.container{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border: solid 2px darkgray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    height:245px;
+    box-sizing: border-box;
+    background: rgb(128,255,255);
+    background: linear-gradient(90deg, rgba(128,255,255,0.938813025210084) 0%, rgba(36,181,195,0.8911939775910365) 35%, rgba(0,255,175,0.8799894957983193) 100%);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}   
+
+.form-input{
+    text-align: center;
+    width: 60%;
+    height: 25px;
+    margin-bottom: 4px;
+    border: solid 1px darkgray;
+    border-radius: 3px;
+    /* background: rgb(36,181,195);
+    background: linear-gradient(90deg, rgba(36,181,195,0.8911939775910365) 22%, rgba(128,255,255,0.938813025210084) 54%, rgba(0,255,222,0.8799894957983193) 93%); */
+    /* color:rgb(109, 93, 70); */
+    color:black
+}
+
+.form-input:focus{
+    outline: none;
+    opacity: 0.8;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.form-input::placeholder{
+    /* color:rgb(109, 93, 70); */
+    color: black;
+}
+
+.form-button{
+    border: solid 1px darkgray;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 120px;
+    height: 30px;
+    /* color:rgb(109, 93, 70);
+    background: rgb(128,255,255);
+    background: linear-gradient(90deg, rgba(128,255,255,0.938813025210084) 4%, rgba(36,181,195,0.8911939775910365) 62%, rgba(0,255,222,0.8799894957983193) 100%); */
+    color:black;
+}
+
+.form-button:hover{
+    opacity: 0.6;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.form-button:focus{
+    outline: none;
+    opacity: 0.6;
+}

@@ -1,0 +1,336 @@
+body{
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    background: linear-gradient(90deg, rgba(128,255,255,0.938813025210084) 4%, rgba(36,181,195,0.8911939775910365) 62%, rgba(0,255,222,0.8799894957983193) 100%);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+.main-header {
+    position: fixed;
+	margin-top: 6px;
+	box-sizing: border-box;
+	display: flex;
+    top: 0;
+    left: 0;
+	right: 0;
+    height: 150px;
+	margin-left: 6px;
+	margin-right: 6px;
+    background-color: whitesmoke;
+    border: solid 2px darkgray;
+	border-radius: 16px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.main-sidebar {
+    position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+    left: 0;
+	bottom: 6px;
+	margin-left: 6px;
+	margin-top: 6px;
+	box-sizing: border-box;
+    width: 200px;
+    height: calc(100vh - 168px);
+	background-color: whitesmoke;
+	border: solid 2px darkgray;
+	border-radius: 16px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.upper-part{
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
+	align-items: center;
+	justify-content: center;
+	row-gap: 2px;
+	width: 100%;
+}
+
+.lower-part{
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr;
+	align-items: center;
+	justify-content: center;
+	row-gap: 4px;
+	width: 100%;
+}
+
+.upper-part button,
+.lower-part button{
+	/* background: cyan; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	width: 100%;
+	font-weight: 500;
+	font-size: 24px;
+	background-color: whitesmoke;
+	height: 40px;
+}
+
+.upper-part .home-button{
+	margin-top: 2px;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+
+.upper-part .add-device img{
+	padding-right: 22px;
+	padding-bottom: 4px;
+	height: 21px;
+}
+
+.upper-part .home-button img,
+.upper-part .add-device img{
+	padding-bottom: 4px;
+	padding-right: 4px;
+}
+
+.upper-part .employees{
+	padding-right: 6px;
+}
+
+.upper-part .employees img{
+	width: 20px;
+	padding-bottom: 4px;
+	padding-right: 4px;
+}
+
+/* .upper-part .add-employee{
+	padding-right: 4px;
+	font-size: 22px;
+}
+
+.upper-part .add-employee img{
+	width: 24px;
+	padding-bottom: 4px;
+	padding-right: 8px;
+} */
+/*
+	Adjust the .add-employee button's width to the width of the .add-device button
+	And the image's width to the width of the .add-device button's image
+	And that the text is centered on a single line
+*/
+
+.upper-part .add-employee{
+	padding-right: 4px;
+	font-size: 22px;
+	width: 100%;
+}
+
+.upper-part .add-employee img{
+	width: 20px;
+	padding-bottom: 4px;
+	padding-right: 8px;
+}
+
+.upper-part .export-to-excel{
+	padding-right: 4px;
+	font-size: 21px;
+}
+
+.upper-part .export-to-excel img{
+	width: 17px;
+	padding-bottom: 4px;
+	padding-right: 8px;
+}
+
+.upper-part .generate-form{
+	padding-right: 4px;
+	font-size: 22px;
+}
+
+.upper-part .generate-form img{
+	width: 19px;
+	padding-bottom: 4px;
+	padding-right: 2px;
+}
+
+.lower-part .logout-button{
+	margin-bottom: 12px;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+	padding-right: 22px;
+}
+
+.lower-part .about-button{
+	padding-right: 18px;
+}
+
+.lower-part .about-button img{
+	width: 24px;
+	padding-bottom: 3px;
+	padding-right: 2px;
+}
+
+.lower-part .logout-button img{
+	width: 22px;
+	padding-bottom: 2px;
+	padding-right: 2px;
+}
+
+.table-container{
+	margin-left: 212px;
+	margin-top: 162px;
+	margin-right: 6px;
+	height: calc(100vh - 168px);
+	overflow-y: auto;
+	box-sizing: border-box;
+	padding:16px;
+	background-color: white;
+	border: solid 2px darkgray;
+	border-radius: 12px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.table-container-add-device{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+td{
+	text-align: center;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+td.round{
+	border-radius: 8px;
+}
+
+.Active{
+	background-color: lightgreen;
+	color: rgb(51, 62, 72);
+}
+
+.Inactive{
+	background-color: darkgreen;
+	color: rgb(44, 42, 40);
+}
+
+.child-table {
+    border-collapse: collapse;
+	align-items: center;
+	display: table;
+	justify-content: center;
+    border: 1px solid #ccc;
+    /* margin-top: 10px; */
+    width: 100%;
+}
+
+/* Define a CSS class for styling the generated table */
+.table-style {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+  }
+  
+  .table-style th,
+  .table-style td {
+	padding: 8px;
+	border: 1px solid #ccc;
+  }
+  
+  .table-style th {
+	background-color: #f2f2f2;
+	text-align: left;
+  }
+  
+  .table-style tbody tr:nth-child(even) {
+	background-color: #f2f2f2;
+  }
+  
+
+.child-table dt,
+.child-table dl,
+.child-table dd {
+    border: 2px solid black; /* Add grid border to table cells */
+    padding: 8px; /* Add padding for cell content */
+}
+
+.nav-button{
+	position: relative;
+	padding: 10px 20px;
+	font-size: 16px;
+}
+
+.click-effect {
+	position: relative;
+	background-color: #3498db;
+	color: black;
+	border: none;
+	cursor: pointer;
+  }
+
+
+  
+  .click-effect::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.3);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s;
+  }
+  
+  .click-effect:hover::after {
+	opacity: 1;
+  }
+  
+  .click-effect:active::after {
+	background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .table-button{
+	border: none;
+	background: none;
+	padding:0px 8px;
+	margin: 0px;
+	margin-right: 6px;
+  }
+
+  .table-button:focus{
+	outline: none;
+  }
+
+  .table-button-modify img{
+	width: 20px;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 4px; 	
+  }
+
+  .table-button-delete img{
+	margin: 0;
+	padding: 0;
+	width: 27px;
+  }
+
+  .p-in-table{
+	margin: 0;
+	padding: 8px;
+	font-weight: 700;
+  }
