@@ -1,7 +1,7 @@
 {
     "host": "localhost",
     "user": "root",
-    "password": "Summer@123",
+    "password": "",
     "database": "centralizare_echipamente_it",
 
     "port": "3000"
